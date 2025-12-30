@@ -9,5 +9,8 @@
   },
   "devDependencies": {
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@quievreux/ui": "^0.1.1"
   }
 }
