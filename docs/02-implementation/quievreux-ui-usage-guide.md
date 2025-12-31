@@ -33,21 +33,15 @@ pnpm add @quievreux/ui
 # npm
 npm install @quievreux/ui
 ```
-## Step 3: Styling Integration
-You must import the design tokens for the styles to appear correctly.
-### Option A: Global CSS (Simple)
-Add this to your `globals.css` or main entry CSS file:
-```css
-@import '@quievreux/ui/styles';
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-```
-### Option B: Tailwind Integration (Recommended)
-To enable Tailwind Intellisense and use the tokens (colors, spacing) as utility classes:
+## Step 3: Styling Integration (Tailwind CSS)
+
+To ensure the library's styles are included in the build and to use the design tokens, you **must** configure Tailwind CSS to scan the package files.
+
 Modify your `tailwind.config.ts`:
+
 ```typescript
 import type { Config } from "tailwindcss";
+
 const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
@@ -105,5 +99,4 @@ export default function Dashboard() {
 ### Issue: Styles missing / Icons unstyled
 **Symptoms:** Icons appear but have wrong sizes or colors don't work.
 **Solution:**
-1. Check if `@import '@quievreux/ui/styles';` is present in your CSS.
-2. If using Tailwind, verify the `content` array in `tailwind.config.ts` includes the node_modules path.
+1. Verify the `content` array in `tailwind.config.ts` includes the correct path: `"./node_modules/@quievreux/ui/dist/**/*.{js,mjs}"`

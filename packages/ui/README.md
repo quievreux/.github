@@ -13,13 +13,23 @@ pnpm add @quievreux/ui
 
 Voraussetzung: `.npmrc` mit GitHub Token konfiguriert.
 
-## Design Tokens
+## Integration (Tailwind CSS)
 
-Importiere die Tokens in deine globale CSS-Datei:
+Anstatt ein CSS-File zu importieren, muss Tailwind CSS so konfiguriert werden, dass es den JavaScript-Code dieses Pakets nach Klassen scannt.
 
-```css
-@import '@quievreux/ui/styles';
+Füge dazu folgenden Pfad in deine `tailwind.config.js` unter `content` hinzu:
+
+```javascript
+module.exports = {
+  content: [
+    // ... andere Pfade
+    "./node_modules/@quievreux/ui/dist/**/*.{js,mjs}"
+  ],
+  // ...
+}
 ```
+
+Dadurch wird nur das CSS generiert, das tatsächlich verwendet wird.
 
 ## Icons
 

@@ -94,16 +94,11 @@ export default config;
 
 ## 4. Global Styles
 
-Import the Design System's CSS tokens in your application's entry CSS file (e.g., `globals.css`):
-
-```css
-/* Import Design Tokens */
-@import '@quievreux/ui/styles';
-
+/* Global Styles */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-```
+
 
 ---
 
