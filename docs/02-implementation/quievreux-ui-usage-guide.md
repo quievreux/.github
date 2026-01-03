@@ -1,5 +1,5 @@
 ---
-title: "Using @quievreux/ui in External Projects"
+title: "Using @squievreux/ui in External Projects"
 type: "implementation"
 audience: "developer"
 status: "approved"
@@ -9,29 +9,17 @@ created: "2025-12-30"
 updated: "2025-12-30"
 tags: ["setup", "configuration", "ui", "design-system"]
 ---
-# Using @quievreux/ui in External Projects
+# Using @squievreux/ui in External Projects
 ## Prerequisites
 - [Node.js 20+]
 - [pnpm or npm]  
-- [GitHub Personal Access Token (PAT) with `read:packages` scope]
-## Step 1: Authentication Setup
-Since the package is hosted on the **GitHub Package Registry** (not public npm), you must configure authentication.
-Create or edit the `.npmrc` file in the **root directory** of your consuming project:
-```ini
-# .npmrc
-@quievreux:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=${GITHUB_TOKEN}
-```
-### Environment Variables
-- **Local Development:** Set a `GITHUB_TOKEN` environment variable containing your PAT.
-- **CI/CD:** Ensure `GITHUB_TOKEN` is available to the install step.
-## Step 2: Installation
-Install the package using your package manager:
+## Step 1: Installation
+Install the package using your package manager from the public npm registry:
 ```bash
 # pnpm (recommended)
-pnpm add @quievreux/ui
+pnpm add @squievreux/ui
 # npm
-npm install @quievreux/ui
+npm install @squievreux/ui
 ```
 ## Step 3: Styling Integration (Tailwind CSS)
 
@@ -46,7 +34,7 @@ const config: Config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     // 👇 IMPORTANT: Include the package in content scan
-    "./node_modules/@quievreux/ui/dist/**/*.{js,mjs}"
+    "./node_modules/@squievreux/ui/dist/**/*.{js,mjs}"
   ],
   theme: {
     extend: {
@@ -64,7 +52,7 @@ export default config;
 ## Step 4: Component Usage
 Imports components directly from the package. Note that you need to pass `lucide-react` icons to the `Icon` component.
 ```tsx
-import { Icon } from '@quievreux/ui';
+import { Icon } from '@squievreux/ui';
 import { Rocket, Settings } from 'lucide-react';
 export default function Dashboard() {
   return (
@@ -84,19 +72,14 @@ export default function Dashboard() {
   );
 }
 ```
-## Configuration
-### Required Environment Variables
-| Variable     | Description                  | Example | Required |
-| ------------ | ---------------------------- | ------- | -------- |
-| GITHUB_TOKEN | PAT with read:packages scope | ghp_... | yes      |
 ## Troubleshooting
-### Issue: 401 Unauthorized during install
-**Symptoms:** `npm install` fails with a 401 error or "Unable to authenticate".
+
+### Issue: Package not found during install
 **Solution:**
-1. Verify your `.npmrc` is in the project root.
-2. Ensure `GITHUB_TOKEN` environment variable is set in your terminal.
-3. Check that the PAT has `read:packages` permission.
+1. Verify the package name is correct: `@squievreux/ui`.
+2. Ensure you are connected to the official npm registry (`https://registry.npmjs.org/`).
+
 ### Issue: Styles missing / Icons unstyled
 **Symptoms:** Icons appear but have wrong sizes or colors don't work.
 **Solution:**
-1. Verify the `content` array in `tailwind.config.ts` includes the correct path: `"./node_modules/@quievreux/ui/dist/**/*.{js,mjs}"`
+1. Verify the `content` array in `tailwind.config.ts` includes the correct path: `"./node_modules/@squievreux/ui/dist/**/*.{js,mjs}"`
