@@ -1,5 +1,5 @@
 ---
-title: "Post-Mortem: @quievreux/ui Initial Release"
+title: "Post-Mortem: @squievreux/ui Initial Release"
 type: "operations"
 audience: "developer"
 status: "approved"
@@ -10,11 +10,11 @@ updated: "2025-12-30"
 tags: ["post-mortem", "release", "git", "npm", "ci"]
 ---
 
-# Post-Mortem: Initial Release of @quievreux/ui
+# Post-Mortem: Initial Release of @squievreux/ui
 
 ## 1. Executive Summary
 
-The initial setup and release of the `@quievreux/ui` package encountered several friction points, primarily revolving around **dependency resolution (Peer Dependencies)**, **CI environment configuration**, and **Git branch management**.
+The initial setup and release of the `@squievreux/ui` package encountered several friction points, primarily revolving around **dependency resolution (Peer Dependencies)**, **CI environment configuration**, and **Git branch management**.
 
 This document summarizes the root causes, the solutions applied, and the lessons learned to improve future package scaffolding.
 

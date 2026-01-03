@@ -48,7 +48,7 @@ export interface IconProps extends Omit<LucideProps, 'size'> {
  * 
  * @example
  * ```tsx
- * import { Icon } from '@quievreux/ui';
+ * import { Icon } from '@squievreux/ui';
  * import { Music } from 'lucide-react';
  * 
  * <Icon icon={Music} size="lg" className="text-primary" />

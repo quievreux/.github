@@ -21,17 +21,17 @@ Accepted
 2025-12-31
 
 ## Context
-When distributing the `@quievreux/ui` package, conflicts arose regarding CSS delivery. Initially, an `@import` of a compiled CSS file was suggested, but this file was often missing or out of sync, leading to build failures in consuming applications (e.g., `vibecoder-architect-reviewer`). We needed a mechanism that respects the consumer's theme and minimizes bundle size.
+When distributing the `@squievreux/ui` package, conflicts arose regarding CSS delivery. Initially, an `@import` of a compiled CSS file was suggested, but this file was often missing or out of sync, leading to build failures in consuming applications (e.g., `vibecoder-architect-reviewer`). We needed a mechanism that respects the consumer's theme and minimizes bundle size.
 
 ## Decision
-We decided to relying on **Tailwind CSS Content Scanning** at the consumer level. The `@quievreux/ui` package will **not** export a standalone CSS bundle. Instead, consuming applications must add the package's distribution path to their `tailwind.config.js` `content` array.
+We decided to relying on **Tailwind CSS Content Scanning** at the consumer level. The `@squievreux/ui` package will **not** export a standalone CSS bundle. Instead, consuming applications must add the package's distribution path to their `tailwind.config.js` `content` array.
 
 ```javascript
 // tailwind.config.js in consumer app
 module.exports = {
   content: [
     // ...
-    "./node_modules/@quievreux/ui/dist/**/*.{js,mjs}",
+    "./node_modules/@squievreux/ui/dist/**/*.{js,mjs}",
   ],
   // ...
 }
@@ -48,4 +48,4 @@ module.exports = {
 - **Onboarding**: Requires manual configuration in `tailwind.config.js` for every new consumer.
 
 ### Mitigations
-- Clear documentation instructions added to `@quievreux/ui/README.md`.
+- Clear documentation instructions added to `@squievreux/ui/README.md`.
