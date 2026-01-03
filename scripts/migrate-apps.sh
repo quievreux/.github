@@ -18,8 +18,15 @@ for REPO in $REPOS; do
   echo "🚀 Migrating $REPO..."
   
   # 1. Clone
-  gh repo clone "$REPO" "temp_$REPO"
-  cd "temp_$REPO" || continue
+  echo "Cloning $REPO..."
+  if [[ "$REPO" != */* ]]; then
+    FULL_REPO="skquievreux/$REPO"
+  else
+    FULL_REPO="$REPO"
+  fi
+  
+  gh repo clone "$FULL_REPO" "temp_$REPO" || { echo "❌ Failed to clone $FULL_REPO"; continue; }
+  cd "temp_$REPO" || { echo "❌ Failed to enter temp_$REPO"; continue; }
 
   # 2. Branch
   git checkout -b chore/migrate-ui-scope
