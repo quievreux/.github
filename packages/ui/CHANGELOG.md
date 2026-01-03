@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/quievreux/.github/compare/ui-v0.2.1...ui-v0.2.2) (2026-01-03)
+
+
+### Bug Fixes
+
+* **migration:** improve script robustness and add debug logging ([1e47d9b](https://github.com/quievreux/.github/commit/1e47d9b11ca1ac7c67973afe4f078f9a058ae1fb))
+
 ## [0.2.1](https://github.com/quievreux/.github/compare/ui-v0.2.0...ui-v0.2.1) (2026-01-03)
 
 
