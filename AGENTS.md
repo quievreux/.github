@@ -7,6 +7,16 @@
 - **Dev**: `pnpm run dev` (package watch mode)
 - **Clean**: `pnpm run clean` (package only)
 
+## Git Workflow
+Um Konflikte sauber zu lösen und eine lineare Historie zu behalten, folgen wir diesem Standard-Ablauf:
+1. **Status prüfen**: `git status`
+2. **Synchronisieren**: `git pull --rebase origin <branch>`
+3. **Konflikte lösen** (falls vorhanden):
+   - Dateien editieren
+   - `git add <file>`
+   - `git rebase --continue`
+4. **Push**: `git push`
+
 ## Code Style
 - **TypeScript**: Strict mode enabled, no unused locals/parameters
 - **Imports**: Use `import { Component } from 'lucide-react'` pattern, organize external imports first

@@ -116,6 +116,19 @@ find apps -name package.json \
 
 ---
 
-## 🏗️ 2. Documentation Structure
+### 8.1 Package Management Rules
+(Existing rules...)
+
+### 8.4 Git & Conflict Resolution (Standard Workflow)
+Um Konflikte zu vermeiden und eine saubere Historie zu garantieren, ist folgender Workflow für alle Agents und Developer verpflichtend:
+
+1. **Local Sync**: `git pull --rebase origin <branch>`
+2. **Conflict Handling**:
+   - Manuelle Korrektur der Konfliktmarker
+   - `git add <file>`
+   - `git rebase --continue`
+3. **Final Push**: `git push`
+
+❌ **VERBOTEN**: `git merge` von Remote-Änderungen in Feature-Branches (verursacht unnötige Merge-Commits).
 
 (Rest of the framework...)
