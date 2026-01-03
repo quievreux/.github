@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/quievreux/.github/compare/ui-v0.2.2...ui-v0.2.3) (2026-01-03)
+
+
+### Bug Fixes
+
+* **migration:** configure git authentication for push ([b7f0106](https://github.com/quievreux/.github/commit/b7f01063e0f5906ff63d102d6d837f9f62a6f92f))
+
 ## [0.2.2](https://github.com/quievreux/.github/compare/ui-v0.2.1...ui-v0.2.2) (2026-01-03)
 
 
