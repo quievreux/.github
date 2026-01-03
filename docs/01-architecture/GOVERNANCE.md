@@ -51,7 +51,7 @@ Package Manager: pnpm (Version 10.0.0+)
 {
   "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4e9ef2e4cfcb3914c57...",
   "engines": {
-    "node": ">=20.0.0",
+    "node": ">=22.0.0",
     "pnpm": ">=10.0.0"
   }
 }

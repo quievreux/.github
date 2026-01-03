@@ -8,6 +8,10 @@
     "lint": "pnpm -r lint",
     "test": "pnpm -r test"
   },
+  "engines": {
+    "node": ">=22.0.0",
+    "pnpm": ">=10.0.0"
+  },
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^13.0.1",
