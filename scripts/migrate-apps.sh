@@ -67,6 +67,12 @@ for REPO in $REPOS; do
     echo "No changes to commit for $REPO."
   else
     git commit -m "chore: migrate to @squievreux/ui and remove GPR authentication"
+    
+    # Configure auth for push
+    if [ -n "$GH_TOKEN" ]; then
+      git remote set-url origin "https://x-access-token:${GH_TOKEN}@github.com/${FULL_REPO}.git"
+    fi
+    
     git push origin chore/migrate-ui-scope --force
   fi
 
