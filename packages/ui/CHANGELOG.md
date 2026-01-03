@@ -1,3 +1,11 @@
+## [0.2.1](https://github.com/quievreux/.github/compare/ui-v0.2.0...ui-v0.2.1) (2026-01-03)
+
+
+### Bug Fixes
+
+* **migration:** handle repository paths correctly ([96eb259](https://github.com/quievreux/.github/commit/96eb2591b28136773a5c09260e3100fc6c0eb78e))
+* **release:** normalize repo url and migration script ([9c9d898](https://github.com/quievreux/.github/commit/9c9d8988d08fb683c0ba1466baed960968e29b50))
+
 # [0.2.0](https://github.com/quievreux/.github/compare/ui-v0.1.2...ui-v0.2.0) (2026-01-03)
 
 
