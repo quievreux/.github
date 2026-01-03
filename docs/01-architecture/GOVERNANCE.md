@@ -68,22 +68,21 @@ Registry: npm (public)
 Scope: @[your-npm-username] (e.g. @squievreux)
 Cost: $0/month
 Access: public
-
-Example:
-- @squievreux/ui
-- @squievreux/utils
-- @squievreux/cli-tools
+Automation: GitHub Actions + Semantic Release
 ```
 
 **Setup:**
-```bash
-# One-time:
-npm login
-pnpm publish --access public
+1. Configure `NPM_TOKEN` in GitHub Repository Secrets.
+2. Use `.github/workflows/release-ui.yml` for automated releases.
+3. Every merge to `main` with a `feat:` or `fix:` commit triggers a release.
 
-# In apps:
-pnpm add @squievreux/ui  # No token needed!
-```
+#### migration Campaign: Bulk Update
+For large-scale updates across many repositories (e.g., migrating @quievreux -> @squievreux), use the **Migration Campaign Action**:
+
+1. Open `.github/workflows/migration-campaign.yml`.
+2. Run workflow manually via `workflow_dispatch`.
+3. Provide the list of repositories to update.
+4. The bot will create PRs in all target repositories.
 
 #### Phase 2: Team Growth (Future)
 ```yaml
@@ -116,5 +115,7 @@ find apps -name package.json \
 ```
 
 ---
+
+## 🏗️ 2. Documentation Structure
 
 (Rest of the framework...)
