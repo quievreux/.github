@@ -57,7 +57,7 @@
     "license": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/quievreux/quievreux-shared.git",
+        "url": "https://github.com/quievreux/.github.git",
         "directory": "packages/ui"
     }
 }
