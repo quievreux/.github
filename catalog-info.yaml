@@ -1,0 +1,12 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: .github
+  description: |
+    Organisationsrepo mit Git Actions
+  annotations:
+    github.com/project-slug: quievreux/.github
+spec:
+  type: library
+  lifecycle: experimental
+  owner: guests
