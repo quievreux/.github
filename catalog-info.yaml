@@ -6,6 +6,7 @@ metadata:
     Organisationsrepo mit Git Actions
   annotations:
     github.com/project-slug: quievreux/.github
+    backstage.io/techdocs-ref: dir:.
 spec:
   type: library
   lifecycle: experimental
